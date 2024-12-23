@@ -27,6 +27,16 @@ public class Student {
 
     public void print(){
         System.out.println(id + "\t" + name + "\t" + english + "\t" + math +
-                "\t" + "總平均 :" + "\t" + (english+math)/2);
+                "\t" + "總平均 :" + "\t" + getAverage());
+        System.out.print("Pass or Filed: ");
+        if (getAverage() >= 60) {
+            System.out.println("PASS");
+        } else {
+            System.out.println("FAILED");
+        }
+    }
+
+    public int getAverage(){
+        return (english+math)/2;
     }
 }
